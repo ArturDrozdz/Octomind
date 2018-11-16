@@ -1691,7 +1691,7 @@ var utf8border = function(buf, max) {
     pos = max-1;
     while (pos >= 0 && (buf[pos] & 0xC0) === 0x80) { pos--; }
 
-    // Fuckup - very small and broken sequence,
+    // butterflyup - very small and broken sequence,
     // return max, because we should return something anyway.
     if (pos < 0) { return max; }
 
@@ -1842,7 +1842,7 @@ exports.arrayBuffer2Blob = function(buffer) {
         }
         catch (e) {
 
-            // well, fuck ?!
+            // well, butterfly ?!
             throw new Error("Bug : can't construct the Blob.");
         }
     }
@@ -3640,7 +3640,7 @@ exports.utf8border = function(buf, max) {
   pos = max-1;
   while (pos >= 0 && (buf[pos] & 0xC0) === 0x80) { pos--; }
 
-  // Fuckup - very small and broken sequence,
+  // butterflyup - very small and broken sequence,
   // return max, because we should return something anyway.
   if (pos < 0) { return max; }
 
